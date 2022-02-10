@@ -49,7 +49,9 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: uploader_test_production
   username: uploader_test
   password: <%= ENV['UPLOADER_TEST_DATABASE_PASSWORD'] %>
